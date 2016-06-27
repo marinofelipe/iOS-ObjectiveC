@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10089" systemVersion="16A201w" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10072.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your measurement in" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cSI-tg-ME5">
+                                <rect key="frame" x="15" y="89" width="203" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="D9V-VK-xxS">
+                                <rect key="frame" x="15" y="176" width="290" height="29"/>
+                                <segments>
+                                    <segment title="yards"/>
+                                    <segment title="feets"/>
+                                    <segment title="centimeters"/>
+                                </segments>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UxO-c4-EE7">
+                                <rect key="frame" x="135" y="221" width="51" height="49"/>
+                                <state key="normal" title="Update"/>
+                                <connections>
+                                    <action selector="UpdateButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ibw-NC-PdH"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2eq-Bx-4R5">
+                                <rect key="frame" x="160" y="284" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="inches" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ed-Zz-f91">
+                                <rect key="frame" x="226" y="93" width="88" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="cSI-tg-ME5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-1" id="FGJ-iQ-ids"/>
+                            <constraint firstItem="UxO-c4-EE7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HAI-LB-yLM"/>
+                            <constraint firstItem="D9V-VK-xxS" firstAttribute="top" secondItem="cSI-tg-ME5" secondAttribute="bottom" constant="57" id="IeM-zu-FO7"/>
+                            <constraint firstItem="UxO-c4-EE7" firstAttribute="top" secondItem="D9V-VK-xxS" secondAttribute="bottom" constant="17" id="Lna-19-wOS"/>
+                            <constraint firstItem="2eq-Bx-4R5" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Omj-RV-D7c"/>
+                            <constraint firstItem="D9V-VK-xxS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Vgp-H1-QEr"/>
+                            <constraint firstItem="cSI-tg-ME5" firstAttribute="centerY" secondItem="9ed-Zz-f91" secondAttribute="centerY" id="Zca-0d-uRE"/>
+                            <constraint firstItem="D9V-VK-xxS" firstAttribute="top" secondItem="9ed-Zz-f91" secondAttribute="bottom" constant="62" id="egz-3N-FpP"/>
+                            <constraint firstItem="2eq-Bx-4R5" firstAttribute="top" secondItem="UxO-c4-EE7" secondAttribute="bottom" constant="14" id="hCU-HM-pZW"/>
+                            <constraint firstItem="2eq-Bx-4R5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ifS-Gl-RKE"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="9ed-Zz-f91" secondAttribute="trailing" constant="-10" id="kmi-RD-ahI"/>
+                            <constraint firstItem="cSI-tg-ME5" firstAttribute="leading" secondItem="D9V-VK-xxS" secondAttribute="leading" id="rj7-oy-h7a"/>
+                            <constraint firstItem="cSI-tg-ME5" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="69" id="s5Z-oB-PGs"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="cSI-tg-ME5" secondAttribute="trailing" constant="86" id="wuc-3c-NlS"/>
+                            <constraint firstItem="9ed-Zz-f91" firstAttribute="leading" secondItem="cSI-tg-ME5" secondAttribute="trailing" constant="8" id="yIM-NG-l40"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="Unitsegment" destination="D9V-VK-xxS" id="GXa-07-SwO"/>
+                        <outlet property="UpdateButton" destination="UxO-c4-EE7" id="lWv-51-d1T"/>
+                        <outlet property="inputField" destination="cSI-tg-ME5" id="IkV-eH-POB"/>
+                        <outlet property="resultLabel" destination="2eq-Bx-4R5" id="Jst-gq-bVc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="234" y="406"/>
+        </scene>
+    </scenes>
+</document>
