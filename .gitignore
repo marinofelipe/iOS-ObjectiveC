@@ -1,0 +1,23 @@
+# Xcode
+.DS_Store
+*/build/*
+_build/
+*.pbxuser
+!default.pbxuser
+profile
+*.xcworkspace
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+contents.xcworkspacedata
+xcuserdata
+project.xcworkspace
+xcshareddata/
+*.moved-aside
+
+
+#CocoaPods
+Pods
