@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10089" systemVersion="16A201w" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10072.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" text="Post on Facebook Post on Facebook" translatesAutoresizingMaskIntoConstraints="NO" id="fiA-TO-H8M">
+                                <rect key="frame" x="0.0" y="263" width="320" height="140"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="0.47999999999999998" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" text="More More More More" translatesAutoresizingMaskIntoConstraints="NO" id="L98-An-Icj">
+                                <rect key="frame" x="0.0" y="420" width="320" height="140"/>
+                                <color key="backgroundColor" red="0.16867439670000001" green="0.63839567549999998" blue="0.062657352920000006" alpha="0.40999999999999998" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cCO-ue-L1S">
+                                <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                <items>
+                                    <barButtonItem systemItem="action" id="FEb-T5-2G4">
+                                        <color key="tintColor" red="0.38915767909999999" green="0.59353633650000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="twitterShare:" destination="vXZ-lx-hvc" id="Qxm-s5-ZE3"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem systemItem="action" id="1fh-og-b0o">
+                                        <color key="tintColor" red="0.04109939569991105" green="0.13364153253639782" blue="0.47626657196969702" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="facebookShare:" destination="vXZ-lx-hvc" id="IQE-6x-e6d"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem systemItem="action" id="rwn-6T-Qxz">
+                                        <color key="tintColor" red="0.16867439670000001" green="0.63839567549999998" blue="0.062657352920000006" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="showMore:" destination="vXZ-lx-hvc" id="kwb-rI-Vp6"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem systemItem="action" id="xVd-sg-G09">
+                                        <color key="tintColor" red="0.88235294119999996" green="0.043137254899999998" blue="0.090196078430000007" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="emptyShare:" destination="vXZ-lx-hvc" id="CeV-4W-SDM"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                                <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </toolbar>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" text="Tweet Tweet Tweet" translatesAutoresizingMaskIntoConstraints="NO" id="IAo-pd-hEr">
+                                <rect key="frame" x="0.0" y="99" width="320" height="140"/>
+                                <color key="backgroundColor" red="0.40725503670234309" green="0.8604652185812337" blue="1" alpha="0.47000000000000003" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="IAo-pd-hEr" secondAttribute="centerX" id="6P6-aj-1jb"/>
+                            <constraint firstItem="cCO-ue-L1S" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-20" id="7GE-nk-bcE"/>
+                            <constraint firstItem="fiA-TO-H8M" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="8XU-Mb-UVn"/>
+                            <constraint firstAttribute="centerX" secondItem="L98-An-Icj" secondAttribute="centerX" id="BoL-Pl-JYD"/>
+                            <constraint firstAttribute="centerX" secondItem="fiA-TO-H8M" secondAttribute="centerX" id="Phx-Jv-TD2"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="IAo-pd-hEr" secondAttribute="trailing" constant="20" id="X7x-D3-RHe"/>
+                            <constraint firstItem="L98-An-Icj" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="cJX-pV-jRj"/>
+                            <constraint firstItem="IAo-pd-hEr" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="ctf-BQ-BNO"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="cCO-ue-L1S" secondAttribute="trailing" constant="-20" id="iFo-70-xyG"/>
+                            <constraint firstItem="cCO-ue-L1S" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-20" id="mfs-di-ink"/>
+                            <constraint firstItem="fiA-TO-H8M" firstAttribute="top" secondItem="IAo-pd-hEr" secondAttribute="bottom" constant="19" id="qk4-ON-K0O"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="facebookTextView" destination="fiA-TO-H8M" id="YVO-w3-fMe"/>
+                        <outlet property="moreTextView" destination="L98-An-Icj" id="bZR-kP-mOD"/>
+                        <outlet property="tweetTextView" destination="IAo-pd-hEr" id="j0z-KM-R6a"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="202" y="377"/>
+        </scene>
+    </scenes>
+</document>
