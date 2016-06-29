@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10089" systemVersion="16A201w" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10072.1"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2cc-Cb-h5d">
+                                <rect key="frame" x="107" y="357" width="106" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Convert"/>
+                                <connections>
+                                    <action selector="tappedButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KuJ-24-zsq"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter amount in U.S. dollars" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CFf-11-9uT">
+                                <rect key="frame" x="43" y="210" width="233" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0WO-u4-B6s">
+                                <rect key="frame" x="143" y="480" width="35" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="pdx-9e-yIb">
+                                <rect key="frame" x="69" y="270" width="182" height="29"/>
+                                <segments>
+                                    <segment title="Peso"/>
+                                    <segment title="Rupees"/>
+                                    <segment title="Francs"/>
+                                </segments>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="pdx-9e-yIb" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="0dF-vy-WUp"/>
+                            <constraint firstItem="pdx-9e-yIb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1KW-gw-qvb"/>
+                            <constraint firstItem="0WO-u4-B6s" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6zq-0P-hG5"/>
+                            <constraint firstItem="0WO-u4-B6s" firstAttribute="top" secondItem="2cc-Cb-h5d" secondAttribute="bottom" constant="75" id="BHF-P9-uNM"/>
+                            <constraint firstItem="pdx-9e-yIb" firstAttribute="top" secondItem="CFf-11-9uT" secondAttribute="bottom" constant="30" id="DFN-G3-Pgv"/>
+                            <constraint firstItem="CFf-11-9uT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KJq-lq-mLW"/>
+                            <constraint firstItem="2cc-Cb-h5d" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WJQ-Oc-A8J"/>
+                            <constraint firstItem="2cc-Cb-h5d" firstAttribute="top" secondItem="pdx-9e-yIb" secondAttribute="bottom" constant="59" id="vi4-dh-D74"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="ConvertButton" destination="2cc-Cb-h5d" id="pNR-2h-jsm"/>
+                        <outlet property="convertedValue" destination="0WO-u4-B6s" id="jfT-en-yQg"/>
+                        <outlet property="currencySegmentedControl" destination="pdx-9e-yIb" id="PQ4-XH-ZCd"/>
+                        <outlet property="inputField" destination="CFf-11-9uT" id="bSQ-qR-aKd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="301" y="452"/>
+        </scene>
+    </scenes>
+</document>
